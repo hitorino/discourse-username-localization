@@ -39,14 +39,14 @@ after_initialize do
 
     def username_first_char_valid?
       return unless errors.empty?
-      if username[0] =~ /[^\w\u{4E00}-\u{9FD5}\u{3400}-\u{4DBF}\u{20000}-\u{2A6DF}\u{2A700}-\u{2CEAF}\u{F900}-\u{FAFF}\u{2F800}-\u{2FA1D}\u{AC00}-\u{D7AF}\u{3040}-\u{30FF}\u{31F0}-\u{31FF}\u{1B000}-\u{1B0FF}\u{3005}]/
+      if username[0] =~ /[^\w\u4E00-\u9FD5\u3400-\u4DBF\u{20000}-\u{2A6DF}\u{2A700}-\u{2CEAF}\uF900–\uFAFF\u{2F800}-\u{2FA1D}\uAC00–\uD7AF\u3040-\u30FF\u31F0–\u31FF\u{1B000}–\u{1B0FF}\u3005]/
         self.errors << I18n.t(:'user.username.must_begin_with_alphanumeric')
       end
     end
 
     def username_last_char_valid?
       return unless errors.empty?
-      if username[-1] =~ /[^\w\u{4E00}-\u{9FD5}\u{3400}-\u{4DBF}\u{20000}-\u{2A6DF}\u{2A700}-\u{2CEAF}\u{F900}-\u{FAFF}\u{2F800}-\u{2FA1D}\u{AC00}-\u{D7AF}\u{3040}-\u{30FF}\u{31F0}-\u{31FF}\u{1B000}-\u{1B0FF}\u{3005}]/
+      if username[-1] =~ /[^\w\u4E00-\u9FD5\u3400-\u4DBF\u{20000}-\u{2A6DF}\u{2A700}-\u{2CEAF}\uF900–\uFAFF\u{2F800}-\u{2FA1D}\uAC00–\uD7AF\u3040-\u30FF\u31F0–\u31FF\u{1B000}–\u{1B0FF}\u3005]/
         self.errors << I18n.t(:'user.username.must_end_with_alphanumeric')
       end
     end
