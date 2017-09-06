@@ -1,3 +1,8 @@
 zh_CN:
   discourse_narrative_bot:
           x_temp_search_answer: "丁语丁语 prpr"
+  user:
+    username:
+      characters: "必须只包含汉字、字母、数字和下划线"
+      must_begin_with_alphanumeric: "必须以汉字、字母、数字或下划线开头"
+      must_end_with_alphanumeric: "必须以汉字、字母、数字或下划线结尾"
